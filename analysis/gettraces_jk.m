@@ -67,7 +67,7 @@ pmove_sem = rssq(pmove_sem,2)/sz(2);
 pturn_sem = rssq(pturn_sem,2)/sz(2);
 angv_sem = rssq(angv_sem,2)/sz(2);
 upwind_sem = rssq(upwind_sem,2)/sz(2);
-%curv_sem = rssq(curv_sem,2)/sz(2);
+
 
 size(vel_sem)
 
