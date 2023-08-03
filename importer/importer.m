@@ -25,7 +25,7 @@ end
 for i = 1:length(refs)
     
     % Creates the path
-    path = ['C:\Users\rfarr\Dropbox\Nagel Lab - Farrell\Freeman Collab\Behavior Data Freeman\Back Cross\30 Days\', refs(i).date, '\']; 
+    path = ['CHANGE THIS PATH', refs(i).date, '\']; 
     
     % Imports all the trials from the specified folder and experiment number
     ex = importthatfolder (path,refs(i).expnumber);
