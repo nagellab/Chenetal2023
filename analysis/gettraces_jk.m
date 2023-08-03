@@ -43,8 +43,7 @@ for i = 1:flies
     upwind_sem = [upwind_sem calcerror(data(i).vy)];
 
     curv_avg = [curv_avg mean(data(i).curvature,2,"omitnan")];
-    %curv_sem = [curv_sem std(data(i).curvature,'omitnan')];
-
+    
 end
 
 sz = size(vel_sem);
@@ -72,15 +71,6 @@ upwind_sem = rssq(upwind_sem,2)/sz(2);
 
 size(vel_sem)
 
-%for i = 1:sz(1)
- %   ssq = 0;
-  %  for q = 1:sz(2)
-   %     ssq = ssq + (curv_sem_pre(i,q))^2;
-    %end
-    %curv_sem(i,1) = sqrt(ssq)/sz(2);
-%end
-
-%curv_sem = rssq(curv_sem,2)/sz(2);
 
 plots = table(vel_avg,vel_sem, pmove_avg,pmove_sem, pturn_avg, pturn_sem,angv_avg, angv_sem, upwind_avg, upwind_sem, curv_avg, curv_sem', 'VariableNames',{'Vel Avg','Vel Sem', 'Prob of Move Avg', 'Prob of Move SEM', 'Prob of Turn Avg','Prob of Turn SEM', 'Angular Velocity Avg', 'Angular Velocity SEM','Upwind Velocity Avg', 'Upwind Velocity SEM', 'Curvature Avg', 'Curvature SEM'});
 
