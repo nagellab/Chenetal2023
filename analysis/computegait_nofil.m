@@ -4,12 +4,6 @@ gait = struct();
 
 flies = length(data);
 for i = 1:flies
-    %sz_x = size(data(i).x);
-    %for w = 1:sz_x(2)
-    %    for l = 2:sz_x(1)
-    %        vel_fly(l-1,w) = (sqrt((data(i).x(l,w)-data(i).x(l-1,w))^2 + (data(i).y(l,w)-data(i).y(l-1,w))^2))/0.02;
-    %    end
-    %end
     gait(i).fly = data(i).fly;
     gait(i).date = data(i).date;
     gait(i).experiment = data(i).experiment;
